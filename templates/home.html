@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hello world</p>
+ <h1>flower predict</h1>
+ <form action="{{url_for('predict')}}" method="post">
+    <input type="text" name="sepal length" placeholder="sepal length" required="required"><br>
+    <input type="text" name="sepal width" placeholder="sepal width" required="required"><br>
+    <input type="text" name="petal length" placeholder="petal length" required="required"><br>
+    <input type="text" name="petal width" placeholder="petal width" required="required"><br>
+    <input type="submit" value="predict">
+ </form>
+
+<div>
+    {{prediction_text}}  
+</div>
+
 </body>
 </html>
